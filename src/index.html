@@ -6,10 +6,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- 1ER PANTALLA PARA CIFRAR EL NIP -->
     <div id="root">
-      <h1>Hola mundo!</h1>
+      <h1>NIP CIPHER</h1>
+      <H2>Bienvenido</H2>
+      <h3>Cifra y Descifra el nip de tu tarjeta de credito</h3>
+      <label for="get-nip">Ingresa tu NIP: </label>
+        <input id="get-nip" type="text" placeholder="ej. 1234 ">
+        <p></p>
+      <label for="get-text">Ingresa tu palabra secreta: </label>
+        <input id="get-text" type="text" placeholder="Ingresa tu palabra " onblur = "upperCase()">
+      <p> </p>
+      <label for="get-number">Ingresa tu llave: </label>
+      <input id="get-number" type="text" placeholder="ej. 12 ">
+  <p></p>
+  <input type ="button"  id="id-cifrar" value="Cifrar">   
+    </div>
+    <!-- 2DA PANTALLA PARA DESCIFRAR -->
+    <div>
+      <h4>Nip Cifrado</h4>
+      <label for="id-descifrar">Para descifrar presione el siguiente botón:  </label>
+      <input id="id-descifrar" type="button" value= "Descifrar">
+    </div>
+      <!-- 3ERA PANTALLA DATOS PARA DESCIFRAR -->
+    <div>
+      <h3>Has elegido descifrar</h3>
+      <label for="get-text">Ingresa tu palabra cifrada:  </label>
+        <input id="get-text" type="text" placeholder="Ingresa palabra cifrada ">
+      <p> </p>
+      <label for="get-number">Ingresa tu llave: </label>
+      <input id="get-number" type="text" placeholder="ej. 12 ">
+      <br> <br>
+      <input type ="button"  id="id-mostrar" value="Mostrar nip">  
+    </div>
+    <div>
+      <h3>Tu nip es:</h3>
+      
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
+
