@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Nip Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- 1ER PANTALLA PARA CIFRAR EL NIP -->
-    <div id="root">
+    <div id="root" class= "visible">
       <h1>NIP CIPHER</h1>
       <H2>Bienvenido</H2>
       <h3>Cifra y Descifra el nip de tu tarjeta de credito</h3>
@@ -20,16 +20,17 @@
       <label for="get-number">Ingresa tu llave: </label>
       <input id="get-number" type="text" placeholder="ej. 12 ">
   <p></p>
-  <input type ="button"  id="id-cifrar" value="Cifrar">   
+  <input type ="button"  id="id-cipher" value="Cifrar"> 
+    
     </div>
     <!-- 2DA PANTALLA PARA DESCIFRAR -->
-    <div>
+    <div id= "second-screen" class= "invisible">
       <h4>Nip Cifrado</h4>
-      <label for="id-descifrar">Para descifrar presione el siguiente botón:  </label>
-      <input id="id-descifrar" type="button" value= "Descifrar">
+      <label for="id-descifrar">Para descifrar presione el siguiente botón: </label>
+      <input id="id-descipher" type="button" value= "Descifrar">
     </div>
-      <!-- 3ERA PANTALLA DATOS PARA DESCIFRAR -->
-    <div>
+     <!-- 3RA PANTALLA DATOS PARA DESCIFRAR -->
+    <div id="thirt-screen" class= "invisible">
       <h3>Has elegido descifrar</h3>
       <label for="get-text">Ingresa tu palabra cifrada:  </label>
         <input id="get-text" type="text" placeholder="Ingresa palabra cifrada ">
@@ -39,8 +40,10 @@
       <br> <br>
       <input type ="button"  id="id-mostrar" value="Mostrar nip">  
     </div>
-    <div>
+     <!-- CUARTA PANTALLA -->
+     <div id="fourth_screen" class="invisible">
       <h3>Tu nip es:</h3>
+      <p><span id= "show-nip"></span></p>
       
     </div>
     <script src="cipher.js"></script>
