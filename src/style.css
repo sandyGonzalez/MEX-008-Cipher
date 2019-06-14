@@ -1,6 +1,22 @@
 .invisible{
 	display:none;
+	text-align: center;
 }
 .visible{
 	display:block;
+	text-align: center;
+
 }
+
+body{
+background: #87CEEB ;
+text-align: center;
+
+
+}
+h1{
+	font-size: 70px
+	
+
+}
+

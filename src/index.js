@@ -1,32 +1,45 @@
 
-const getNip = new Number(document.getElementById('get-nip'));
-const getText = document.getElementById('get-text').value;
-const getNumber = document.getElementById('get-number');
-const cipherButton=document.getElementById('id-cipher');
-const descipherButton= document.getElementById('id-descipher');
+let getNip = document.getElementById('get-nip');
+let getText = document.getElementById('get-text');
+let cipherButton= document.getElementById('id-cipher');
+let getNumber = document.getElementById('key');
+let cipherWord = document.getElementById('cipher-word');
+let descipherButton = document.getElementById('id-descipher');
+//FUNCIÓN CIFRAR
+cipherButton.addEventListener("click", ()=>{
+ let getText1= getText.value.toUpperCase();
+ cipherWord.value = (window.cipher.encode(getNumber.value, getText1));
+
+ console.log(window.cipher.encode(getNumber.value, getText1));
+
+
+})
+
+//FUNCIÓN DESCIFRAR
+descipherButton.addEventListener("click", ()=>{
+    let getText1= getText.value.toUpperCase();
+    cipherWord.value = (window.cipher.encode(getNumber.value, getText1));
+   
+    console.log(window.cipher.decode(getNumber.value, getText1));
+   
+   
+   })
+   
+
+
 
 
 //Cambiar funciones a funciones tipo flecha.
 
-function upperCase(){
-let MayusText= document.getElementById("get-text").value;
-document.getElementById("get-text").value= MayusText.toUpperCase();
-}
+// function upperCase(){
+// let MayusText= document.getElementById("get-text").value;
+// document.getElementById("get-text").value= MayusText.toUpperCase();
+// }
 
 
-    //FUNCIÓN CIFRAR
-const cipher = (getNumber,getText)=> {
-    
-    let box='';//Como una caja donde se guardará toda la palabra
-    for (let i = 0; i< getText.length;i++){
-        
-        const asciiLetter=getText.charCodeAt(i);//convierte el caracter a codigo Ascii
-        const cipherAscii = (asciiLetter-65+offset)%26+65;//aplicamos el offset con la formula
-        const cipherLetter= (String.fromCharCode(cipherAscii));
-        box = box + cipherLetter;// para concatenar cada una de las palabras
-    }
-    return box;
-    }
+    //MUESTRA LA PALABRA CIFRADA EN HTML
+
+    // document.getElementById("cipher-word").innerHTML= cipherWord;
 
     //FUNCIÓN DESCIFRAR
 
@@ -59,7 +72,7 @@ const cipher = (getNumber,getText)=> {
 
 
     //Mostrar nip
-
+    document.getElementById("show-nip").innerHTML= getNip;
     
 
 
