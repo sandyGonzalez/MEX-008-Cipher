@@ -1,10 +1,8 @@
 .invisible{
-	display:none;
-	text-align: center;
+    display:none;
 }
 .visible{
-	display:block;
-	text-align: center;
+    display:block;
 
 }
 
@@ -15,8 +13,7 @@ text-align: center;
 
 }
 h1{
-	font-size: 70px
-	
+    font-size: 70px
+    
 
 }
-

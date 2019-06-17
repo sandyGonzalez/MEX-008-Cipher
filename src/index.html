@@ -10,6 +10,9 @@
     <div id="root" class= "visible">
       <h1>NIP CIPHER</h1>
       <H2>Bienvenido</H2>
+      <!-- boton de instrucciones -->
+      <label for="instructions"></label>
+      <input type="button" id= "instructions" value = "instrucciones"> 
       <h3>Cifra y Descifra el nip de tu tarjeta de credito</h3>
       <label for="get-nip">Ingresa tu NIP: </label>
         <input id="get-nip" type="text" placeholder="ej. 1234 ">
@@ -36,23 +39,24 @@
      <!-- 3RA PANTALLA DATOS PARA DESCIFRAR -->
     <div id="thirt-screen" class= "invisible">
       <h3>Has elegido descifrar</h3>
-      <label for="get-text">Ingresa tu palabra cifrada:  </label>
-        <input id="get-text" type="text" placeholder="Ingresa palabra cifrada ">
+      <label for="get-text2">Ingresa tu palabra cifrada:  </label>
+        <input id="get-text2" type="text" placeholder="Ingresa palabra cifrada ">
       <p> </p>
-      <label for="get-number">Ingresa tu llave: </label>
-      <input id="get-number" type="text" placeholder="ej. 12 ">
+      <label for="key2">Ingresa tu llave: </label>
+      <input id="key2" type="text" placeholder="ej. 12 ">
       <br> <br>
-      <input type ="button"  id="id-mostrar" value="Mostrar nip">  
+      <input type ="button"  id="mostrar" value="Mostrar nip">  
     </div>
 
      <!-- CUARTA PANTALLA -->
-     <div id="fourth_screen" class="invisible">
+     <div id="fourth-screen" class="invisible">
+       <h3>Tu palabra secreta es:</h3>
+       <p><span id = "original-word"></span></p>
       <h3>Tu nip es:</h3>
       <p><span id= "show-nip"> </span></p>
       
-    </div>
+ </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
-

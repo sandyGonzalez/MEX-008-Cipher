@@ -1,27 +1,38 @@
-
 let getNip = document.getElementById('get-nip');
 let getText = document.getElementById('get-text');
 let cipherButton= document.getElementById('id-cipher');
 let getNumber = document.getElementById('key');
 let cipherWord = document.getElementById('cipher-word');
 let descipherButton = document.getElementById('id-descipher');
+let showNip = document.getElementById('mostrar');
+
+//BOTONES PARA DESCIFRAR
+let getText2 = document.getElementById('get-text2');
+let getNumber2 =document.getElementById('key2');
+
 //FUNCIÓN CIFRAR
 cipherButton.addEventListener("click", ()=>{
  let getText1= getText.value.toUpperCase();
  cipherWord.value = (window.cipher.encode(getNumber.value, getText1));
 
  console.log(window.cipher.encode(getNumber.value, getText1));
+ 
+ document.getElementById("cipher-word").innerHTML = cipherWord.value;
 
-
+ document.getElementById('show-nip').innerHTML= getNip.value;
+ console.log(getNip.value);
 })
 
+
+
+
 //FUNCIÓN DESCIFRAR
-descipherButton.addEventListener("click", ()=>{
-    let getText1= getText.value.toUpperCase();
-    cipherWord.value = (window.cipher.encode(getNumber.value, getText1));
+showNip.addEventListener("click", ()=>{
+    let getText1= getText2.value.toUpperCase();
+    cipherWord.value = (window.cipher.decode(getNumber2.value, getText1));
    
-    console.log(window.cipher.decode(getNumber.value, getText1));
-   
+    console.log(window.cipher.decode(getNumber2.value, getText1));
+    document.getElementById('original-word').innerHTML = cipherWord.value;
    
    })
    
@@ -65,19 +76,15 @@ descipherButton.addEventListener("click", ()=>{
     //OCULTA LA TERCERA PANTALLA MUESTRA LA CUARTA
     function displayThree(){
         document.getElementById("thirt-screen").className = "invisible";
-        document.getElementById("fourth_screen").className = "visible";
+        document.getElementById("fourth-screen").className = "visible";
     }
-
-    descipherButton.addEventListener("click",displayThree);
+    showNip.addEventListener("click",displayThree);
 
 
     //Mostrar nip
-    document.getElementById("show-nip").innerHTML= getNip;
+    document.getdocumentElementById("show-nip").innerHTML= getNip.value;
     
-
-
-
-
+    
 
 
 
