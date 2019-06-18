@@ -5,9 +5,9 @@ window.cipher = {
           getNumber = parseInt(getNumber);
          for (let i = 0; i< getText.length;i++){
            
-             const asciiLetter=getText.charCodeAt(i);//convierte el caracter a codigo Ascii
-             const cipherAscii = (asciiLetter-65+getNumber)%26+65;//aplicamos el offset con la formula
-             const cipherLetter= (String.fromCharCode(cipherAscii));
+            let asciiLetter=getText.charCodeAt(i);//convierte el caracter a codigo Ascii
+             let cipherAscii = (asciiLetter-65+getNumber)%26+65;//aplicamos el offset con la formula
+             let cipherLetter= (String.fromCharCode(cipherAscii));
              cipherWord = cipherWord + cipherLetter;// para concatenar cada una de las palabras
          }
          return cipherWord;
@@ -19,9 +19,9 @@ window.cipher = {
             let getNumber = parseInt(getNumber2);
            for (let i = 0; i< getText2.length;i++){
             //    console.log(getNumber2);
-               const asciiLetter=getText2.charCodeAt(i);//convierte el caracter a codigo Ascii
-               const cipherAscii = (asciiLetter+65-getNumber)%26+65;//aplicamos el offset con la formula
-               const cipherLetter= (String.fromCharCode(cipherAscii));
+               let asciiLetter=getText2.charCodeAt(i);//convierte el caracter a codigo Ascii
+               let cipherAscii = (asciiLetter+65-getNumber)%26+65;//aplicamos el offset con la formula
+               let cipherLetter= (String.fromCharCode(cipherAscii));
                decipherWord = decipherWord + cipherLetter;// para concatenar cada una de las palabras
            }
            return decipherWord;
