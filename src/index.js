@@ -73,8 +73,6 @@ let numberToString = (text) =>{
         return result;
     }
     
-    
-    
     //CONVIERTE ARREGLO EN CADENA DE NUMEROS
     
     let stringToNumber=(mensaje2Arr)=>{
