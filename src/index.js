@@ -18,7 +18,7 @@ let arr = [];//Primer arreglo para convertir de numeros a String
 let arr2= [];//segundo arreglo para convertir String a numeros
 let result = '';
 let result2= '';
-let text2= "UNO DOS TRES CUATRO"
+
 
 
 //BOTONES PARA DESCIFRAR
@@ -135,10 +135,10 @@ let numberToString = (text) =>{
 cipherButton.addEventListener("click", ()=>{//Hacemos una función anonima para el botón de cifrar y que al hacer click te cifre la palabra
 
     getText = numberToString(getNip.value);//Obteniendo texto de cadena de numeros.
-    console.log(getText);
+   
     let getText1= getText.toUpperCase();//Creamos la variable getText1 y le asignamos el valor del texto ingresado convirtiendolo a mayusculas.
  cipherWord.value = (window.cipher.encode(getNumber.value, getText1));// en la variable cipherWord le asignamos la palabra cifrada mandando a llamar el objeto window.cipher.encode().
-    console.log(cipherWord.value);
+ 
  document.getElementById("cipher-word").innerHTML = cipherWord.value;//mostrando palabra cifrada en el HTML
 
 
@@ -152,13 +152,13 @@ showNip.addEventListener("click", ()=>{
     
 
    let getText1= getText2.value.toUpperCase();
-   console.log(getText1);
+   
     cipherWord.value = (window.cipher.decode(getNumber2.value, getText1));
-    console.log(cipherWord.value);
+  
 
     cipherWord = cipherWord.value.split(' '); //convirtiendo cadena a arreglo.
     cipherWord = stringToNumber(cipherWord);//Transformando texto a numero.
-    console.log(cipherWord);
+  
 
     document.getElementById('original-word').innerHTML = cipherWord;// muestra el nip
 
@@ -220,9 +220,35 @@ showNip.addEventListener("click", ()=>{
 //BOTON LIMPIAR
 
 const clearButton = document.getElementById('clean');
+const clearButton2 = document.getElementById('clean2');
 
 const clearAll = () => {
-    document.getElementById('formulario-cifrar').reset();
+    document.getElementById('formulario-cifar').reset();
+    document.getElementById('original-word').reset();
 }
 
-clearButton.addEventListener('click', clearAll);
+clearButton.addEventListener('click', clearAll); 
+//SEGUNDO BOTON DE LIMPIAR
+const clearAll2 = () => {
+    document.getElementById('desipher-form').reset();
+    
+}
+
+clearButton2.addEventListener('click', clearAll2); 
+
+//BOTON INSTRUCCIONES
+
+let inicio = ()=>{
+    location.href="instructions.html";
+
+}
+
+const instructions = document.getElementById("instructions");
+
+
+
+instructions.addEventListener("click",inicio);
+
+
+
+
