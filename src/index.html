@@ -6,26 +6,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- 1ER PANTALLA PARA CIFRAR EL NIP -->
+    <!--  PANTALLA BIENVENIDA PARA CIFRAR EL NIP -->
     <div id="root" class= "visible">
       <h1>NIP CIPHER</h1>
       <h2>Bienvenido</h2>
       <!-- boton de instrucciones -->
       <label for="instructions"></label>
       <input type="button" id= "instructions" value = "instrucciones"> 
-      <h3>Cifra y Descifra el nip de tu tarjeta de credito</h3>
+      <h3>Cifra y Descifra el nip de tu tarjeta</h3>
+      
+  <p></p>
+  <input type ="button"  id="id-cipher1" value="Cifrar"> 
+
+  <label for="id-descifrar"> </label>
+  <input id="id-descipher1" type="button" value= "Descifrar">
+    
+    </div>
+    <!-- 1ERA PANTALLA PARA CIFRAR -->
+    <div id ="first-screen" class = "invisible">
+      <h3>Has elegido cifrar</h3>
+      <form id="formulario-cifar" action="">
       <label for="get-nip">Ingresa tu NIP: </label>
         <input id="get-nip" type="text" placeholder="ej. 1234 ">
         <p></p>
-      <label for="get-text">Ingresa tu palabra secreta: </label>
-        <input id="get-text" type="text" placeholder="Ingresa tu palabra " >
-        <!-- onblur = "upperCase() -->
+     
       <p> </p>
       <label for="key">Ingresa tu llave: </label>
       <input id="key" type="text" placeholder="ej. 12 ">
-  <p></p>
-  <input type ="button"  id="id-cipher" value="Cifrar"> 
-    
+      <p></p>
+      <input type ="button"  id="id-cipher" value="Cifrar">
+      <input type="button" id="clean" value="Borrar">
+    </form>
     </div>
     <!-- 2DA PANTALLA PARA DESCIFRAR -->
     <div id= "second-screen" class= "invisible">
@@ -33,11 +44,10 @@
       <h4>Tu palabra cifrada es: </h4>
       <p><span id= "cipher-word"></span></p>
      
-      <label for="id-descifrar">Para descifrar presione el siguiente botón: </label>
-      <input id="id-descipher" type="button" value= "Descifrar">
+      <input type="button" id = "start" value = "inicio">
     </div>
 
-     <!-- 3RA PANTALLA DATOS PARA DESCIFRAR -->
+     <!--  3RA PANTALLA DATOS PARA DESCIFRAR -->
     <div id="thirt-screen" class= "invisible">
       <h3>Has elegido descifrar</h3>
       <label for="get-text2">Ingresa tu palabra cifrada:  </label>
@@ -49,12 +59,11 @@
       <input type ="button"  id="mostrar" value="Mostrar nip">  
     </div>
 
-     <!-- CUARTA PANTALLA -->
+     <!-- 4TA PANTALLA -->
      <div id="fourth-screen" class="invisible">
-       <h3>Tu palabra secreta es:</h3>
+       <h3>Tu nip es: </h3>
        <p><span id = "original-word"></span></p>
-      <h3>Tu nip es:</h3>
-      <p><span id= "show-nip"> </span></p>
+       <input type="button" id = "start2" value = "inicio">
       
  </div>
     <script src="cipher.js"></script>
