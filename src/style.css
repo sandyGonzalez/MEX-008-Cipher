@@ -73,7 +73,25 @@ h1{
 
   }
   
-  
+  .textBox{
+    position: center;
+    width: 20%;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Abel', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: black
+   ;
+    background-color:white;
+    border-radius: 10px;
+    border: 2px solid black;
+   }
 
+
+   }
+
+   .header{
+    background-color: salmon;
 
    }

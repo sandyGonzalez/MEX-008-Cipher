@@ -2,10 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- COLOCAR TIPOGRAFIA -->
     <title>Nip Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class = "header">
+      <figure class = "logo">//
+        <!-- Figure para imagenes y videos -->
+
+        <a href="#">
+          <img src="./img/laboratoria" alt="logo nombre" width="50%">
+        </a>
+      </figure>
+
+
+    </header>
     <!--  PANTALLA BIENVENIDA PARA CIFRAR EL NIP -->
     <div id="root" class= "visible">
       <h1>NIP CIPHER</h1>
@@ -27,12 +39,12 @@
       <h3>Has elegido cifrar</h3>
       <form id="formulario-cifar" action="">
       <label for="get-nip">Ingresa tu NIP: </label>
-        <input id="get-nip" type="text" placeholder="ej. 1234 ">
+        <input id="get-nip" type="text" placeholder="ej. 1234 "class = "textBox">
         <p></p>
      
       <p> </p>
       <label for="key">Ingresa tu llave: </label>
-      <input id="key" type="text" placeholder="ej. 12 ">
+      <input id="key" type="text" placeholder="ej. 12 " class = "textBox">
       <p></p>
       <input type ="button"  id="id-cipher" value="Cifrar" class = "botonUno">
       <input type="button" id="clean" value="Borrar" class = "botonUno">
@@ -44,7 +56,7 @@
       <h4>Tu palabra cifrada es: </h4>
       <p><span id= "cipher-word"></span></p>
      
-      <input type="button" id = "start" value = "inicio">
+      <input type="button" id = "start" value = "inicio" class = "botonUno">
     </div>
 
      <!--  3RA PANTALLA DATOS PARA DESCIFRAR -->
@@ -52,10 +64,10 @@
       <h3>Has elegido descifrar</h3>
       <form id = "desipher-form" action="">
       <label for="get-text2">Ingresa tu palabra cifrada:  </label>
-        <input id="get-text2" type="text" placeholder="Ingresa palabra cifrada ">
+        <input id="get-text2" type="text" placeholder="Ingresa palabra cifrada " class = "textBox">
       <p> </p>
       <label for="key2">Ingresa tu llave: </label>
-      <input id="key2" type="text" placeholder="ej. 12 ">
+      <input id="key2" type="text" placeholder="ej. 12 " class = "textBox">
       <br> <br>
       <input type ="button"  id="mostrar" value="Mostrar nip" class = "botonUno"> 
       <input type="button" id="clean2" value="Borrar" class = "botonUno"> 
@@ -66,7 +78,7 @@
      <div id="fourth-screen" class="invisible">
        <h3>Tu nip es: </h3>
        <p><span id = "original-word"></span></p>
-       <input type="button" id = "start2" value = "inicio">
+       <input type="button" id = "start2" value = "inicio" class = "botonUno">
       
  </div>
     <script src="cipher.js"></script>
