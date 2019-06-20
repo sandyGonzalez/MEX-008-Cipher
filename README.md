@@ -1,3 +1,36 @@
+## Introducción
+La Aplicación NIP CIPHER sirve para cifrar y descifrar nips de las tarjetas de forma efectiva, para tener un control de tus claves para acceder a tus tarjetas, 
+
+Funcionalidad: NIP CIPHER funciona al igual que el cifrado cesar con un offset y una palabra, en este caso utilizamos los numeros del nip como una palabra y el offset o llave para encriptarlos.
+
+El offset es el número de veces que el texto se mueve en el alfabeto retornando una nueva palabra, para descifrar solo ingresas esta nueva palabra y tu offset o llave original.
+
+## Definición del producto
+- El proceso para definir el producto:
+
+Para lograr entender el problema se utilizaron Encuestas.
+Las encuestas permitieron conocer que muchos usuarios temen que les clonen la tarjeta y les roben el nip de las mismas.
+Entonces, una forma de solucionar esto es encriptando los nips de sus tarjetas, de forma que solo los dueños sepan la “llave para descifrarlos”.
+
+- ¿Quiénes son los principales usuarios de producto?
+
+Son personas adultas que hagan uso de tarjetas (crédito/debito)
+
+- ¿Cómo pensaste en los usuarios?
+Los usuarios encuestados son personas con tarjetas de entre 19 a 55 años.
+
+- ¿Cuáles son los objetivos de estos usuarios en relación con tu producto?
+Cifrar el nip de sus tarjetas, así solo los dueños sabrán como descifrarlas y guardarlas donde gusten.
+
+- ¿Cómo crees que el producto que estás creando está resolviendo sus problemas?
+ Anotar tus nips en tu correo, notas o en libretas, hace que sea más sencillo para otras personas acceder a ellos, en cambio sí están cifrados nadie sabe que se trata de tus nips.
+ 
+### Instalación y ejecución del producto:
+Puedes acceder al producto a través de GitHub pages en el siguiente repositorio:https://sandygonzalez.github.io/MEX-008-Cipher/src/               	
+
+
+
+
 # Cifrado César
 
 Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
