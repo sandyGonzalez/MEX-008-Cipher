@@ -19,6 +19,7 @@ let arr = [];//Primer arreglo para convertir de numeros a String
 let arr2= [];//segundo arreglo para convertir String a numeros
 let result = '';
 let result2= '';
+let textarr= []
 
 
 
@@ -65,11 +66,12 @@ let numberToString = (text) =>{
     arr.push("NUEVE");
     }
     else{
-        arr.push(text.charAt(i));
+        textarr.push(text.charAt(i));
     }
     }
-    
+    textarr = textarr.join('');
     result = arr.join(' ');
+    result = result + textarr;
     
         return result;
     }
@@ -228,7 +230,7 @@ const clearButton2 = document.getElementById('clean2');
 
 const clearAll = () => {
     document.getElementById('formulario-cifar').reset();
-    document.getElementById('original-word').reset();
+ 
 }
 
 clearButton.addEventListener('click', clearAll); 
@@ -237,6 +239,7 @@ const clearAll2 = () => {
     document.getElementById('desipher-form').reset();
     
 }
+
 
 clearButton2.addEventListener('click', clearAll2); 
 
