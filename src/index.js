@@ -10,7 +10,8 @@ let showNip = document.getElementById('mostrar');//Botón para mostrar el nip,
 //Botones de inicio 
 let start = document.getElementById('start');//Botón de inicio 
 let start2 = document.getElementById('start2');//Segundo botón de inicio.
-
+//BOTON INSTRUCCIONES
+instructionsButton= document.getElementById("instructions");
 
 
 //VARIABLES PARA LAS FUNCIONES QUE CONVIERTEN NUMEROS A LETRAS
@@ -198,12 +199,20 @@ showNip.addEventListener("click", ()=>{
     }
     showNip.addEventListener("click",displayThree);
 
+    //MUESTRA LA PANTALLA DE LAS INSTRUCCIONES
+    const displayFour = () =>{
+        document.getElementById("root").className = "visible";
+        document.getElementById("fifth-screen").className = "visible";
+    }
+    instructionsButton.addEventListener("click",displayFour);
+
     //VOLVER A PANTALLA DE INICIO
     const displayStart = () =>{
         document.getElementById("second-screen").className = "invisible";
         document.getElementById("root").className = "visible";
     }
     start.addEventListener("click",displayStart);
+    
 
     //VOLVER A PANTALLA INICIAL DESDE SEGUNDO BOTON DE INICIO.
     const displayStart2 = () =>{
@@ -233,12 +242,12 @@ clearButton2.addEventListener('click', clearAll2);
 
 //BOTON INSTRUCCIONES
 
-let inicio = ()=>{
-    location.href="instructions.html";
+// let inicio = ()=>{
+//     location.href="instructions.html";
 
-}
+// }
 
-const instructions = document.getElementById("instructions");
+// const instructions = document.getElementById("instructions");
 
 
 
