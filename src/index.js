@@ -227,6 +227,8 @@ showNip.addEventListener("click", ()=>{
 
 const clearButton = document.getElementById('clean');
 const clearButton2 = document.getElementById('clean2');
+const refreshButton = document.getElementById("start");
+const refreshButton2 =document.getElementById("start2");
 
 const clearAll = () => {
     document.getElementById('formulario-cifar').reset();
@@ -235,6 +237,9 @@ const clearAll = () => {
 
 clearButton.addEventListener('click', clearAll); 
 //SEGUNDO BOTON DE LIMPIAR
+
+
+
 const clearAll2 = () => {
     document.getElementById('desipher-form').reset();
     
@@ -245,13 +250,18 @@ clearButton2.addEventListener('click', clearAll2);
 
 //BOTON INSTRUCCIONES
 
-// let inicio = ()=>{
-//     location.href="instructions.html";
-
-// }
 
 // const instructions = document.getElementById("instructions");
+//REFRESCAR PAGINA
+const reFresh = ()=>{
+location.reload(true);
+window.setInterval("reFresh()",300000);
+}
 
+refreshButton.addEventListener("click",reFresh);
+refreshButton2.addEventListener("click",reFresh);
+
+/* Establece el tiempo 1 minuto = 60000 milliseconds. */
 
 
 instructions.addEventListener("click",inicio);
