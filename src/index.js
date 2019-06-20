@@ -11,7 +11,7 @@ let showNip = document.getElementById('mostrar');//Botón para mostrar el nip,
 let start = document.getElementById('start');//Botón de inicio 
 let start2 = document.getElementById('start2');//Segundo botón de inicio.
 //BOTON INSTRUCCIONES
-instructionsButton= document.getElementById("instructions");
+let instructionsButton= document.getElementById("instructions");
 
 
 //VARIABLES PARA LAS FUNCIONES QUE CONVIERTEN NUMEROS A LETRAS
@@ -264,7 +264,7 @@ refreshButton2.addEventListener("click",reFresh);
 /* Establece el tiempo 1 minuto = 60000 milliseconds. */
 
 
-instructions.addEventListener("click",inicio);
+
 
 
 
